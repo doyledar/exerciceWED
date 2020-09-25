@@ -4,17 +4,16 @@
 Template principal
 -------------------------------------------------------------*/
  ?>
-
- <!DOCTYPE html>
- <html lang="en">
- <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Template de base</title>
-   <?php var_dump($connexion); ?>
- </head>
- <body>
-
- </body>
- </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <?php include '../app/vues/template/partials/_head.php'; ?>
+</head>
+<body>
+  <?php include '../app/vues/template/partials/_preload.php'; ?>
+  <?php include '../app/vues/template/partials/_header.php'; ?>
+  <?php include '../app/vues/template/partials/_main.php'; ?>
+  <?php include '../app/vues/template/partials/_footer.php'; ?>
+  <?php include '../app/vues/template/partials/_scripts.php'; ?>
+</body>
+</html>
