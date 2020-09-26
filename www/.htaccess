@@ -12,6 +12,7 @@ RewriteEngine on
 # ROUTES
 #--------------------------------------------------
 
+
   # DETAILS D'UN POST
   # PATTERN: posts/{id}/{slug}
   # VERS: index.php?postID=x

@@ -1,7 +1,7 @@
 <?php
 /*------------------------------------------------------------------
-../app/controleurs/xxxControleur.php
-contrôleur de xxx
+../app/controleurs/postsControleur.php
+contrôleur des posts
 --------------------------------------------------------------------*/
 
 namespace App\Controleurs\PostsControleur;
