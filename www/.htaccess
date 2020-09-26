@@ -11,11 +11,14 @@ RewriteEngine on
 #--------------------------------------------------
 # ROUTES
 #--------------------------------------------------
-
+  # DETAIL D'UNE CATEGORIE
+  # PATTERN : categories/{id}/{slug}
+  # URL : index.php?categorieID=x
+  RewriteRule ^categories\/([1-9][0-9]*)\/([a-z0-9][a-z0-9\-]*)$ index.php?categorieID=$1 [L]
 
   # DETAILS D'UN POST
   # PATTERN: posts/{id}/{slug}
-  # VERS: index.php?postID=x
+  # URL: index.php?postID=x
   RewriteRule ^posts\/([1-9][0-9]*)\/([a-z0-9][a-z0-9\-]*)$ index.php?postID=$1 [L]
 
 # --------------------------------------------------

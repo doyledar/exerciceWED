@@ -15,3 +15,18 @@ function indexAction(\PDO $connexion) {
   // 2.  Je charge directement la vue
     include '../app/vues/categories/index.php';
 }
+
+
+function showAction(\PDO $connexion, int $id){
+  // 1. On demande les posts de la catégorie au modèle et on le met dans $postsCategorie
+    include_once '../app/modeles/categoriesModele.php';
+    $postsCategorie = CategoriesModele\findAllById($connexion, $id);
+    //var_dump($postsCategorie);
+
+  // 2. On charge la vue show dans $content
+    GLOBAL $content;
+    ob_start();
+      include '../app/vues/categories/show.php';
+    $content = ob_get_clean();
+    //$content = var_dump($postsCategorie);
+}
