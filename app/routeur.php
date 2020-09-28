@@ -3,12 +3,19 @@
 ..app/routeur.php
 Routeur principal
 --------------------------------------------*/
+/*
+  CHARGEMENT DU ROUTEUR DES USERS
+  PATTERN: index.php?users=xxx
+*/
+if (isset($_GET['users'])):
+  include_once '../app/routeurs/users.php';
+
 /* DETAILS D'UNE CATEGORIE
    PATTERN: ?categorieID=x
    CTRL: categoriesControleur
    ACTION: show
    */
-  if (isset($_GET['categorieID'])):
+  elseif (isset($_GET['categorieID'])):
     include_once '../app/controleurs/categoriesControleur.php';
     \App\Controleurs\CategoriesControleur\showAction($connexion, $_GET['categorieID']);
 

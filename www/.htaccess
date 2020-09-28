@@ -11,6 +11,27 @@ RewriteEngine on
 #--------------------------------------------------
 # ROUTES
 #--------------------------------------------------
+
+  # ROUTE DE LA PAGE CONTACT
+  # PATTERN : contact
+  # URL : index.php?contact
+
+  # RewriteRule ^categories\/([1-9][0-9]*)\/([a-z0-9][a-z0-9\-]*).html$ index.php?categorieID=$1 [L]
+  RewriteRule ^contact.html$ index.php?contact.html [L]
+
+  # ROUTES DES USERS
+  # ------------------------------------------------------------
+  # FORMULAIRE DE LOGIN
+  # PATTERN : users/login/form
+  # URL : index.php?users=login/loginForm
+  RewriteRule ^users\/login\/form$ index.php?users=loginForm [L]
+
+  # CONNEXION
+  # PATTERN : users/login/submit
+  # URL : index.php?users=login
+  RewriteRule ^users\/login\/submit$ index.php?users=login [L]
+
+
   # DETAIL D'UNE CATEGORIE
   # PATTERN : categories/{id}/{slug}
   # URL : index.php?categorieID=x
